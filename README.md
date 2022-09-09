@@ -1,1 +1,1 @@
-# ga4-data-layer-standards
+# ga4-standard-data-layer-spec
