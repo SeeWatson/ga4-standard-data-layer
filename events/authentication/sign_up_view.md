@@ -1,8 +1,6 @@
-# Sign Up Start
+# Sign Up View
 
-Fire whenever a user begins filling out an account creation form.
-
-Generally triggered via an HTML change, focus, or click event [listener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) on `input`, `textarea`, and `radio` elements.
+Fire whenever a user initially views an account creation form.
 
 ## Javascript Code
 
@@ -10,7 +8,7 @@ Generally triggered via an HTML change, focus, or click event [listener](https:/
 
 window.dataLayer = window.dataLayer || [];
 dataLayer.push({
-  event: 'sign_up_start'
+  event: 'sign_up_view'
   eventModel: {
     method: '<method>'
   }

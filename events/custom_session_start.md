@@ -1,18 +1,18 @@
-# Page View
+# Custom Session Start
 
-Fire whenever a user loads in a new page, whether that is done synchronously or asynchronously.
+This is an optional event intended to compensate for the inability to send custom parameters with auto generated session_start. 
 
-This event should be the first pushed into the data layer on each page. Given many 3rd party scripts push events to the data layer, this event push should be placed in the page `<head>` and should be the first `<script>` tag on the page to ensure it is the first event.
+The logic for firing this event can vary. If you want it to match the GA4 definition of a session, you'll need to add custom logic to timestamp and monitor either the data layer or outbound GA4 server calls and only send this event whenever it has been 30 minutes or more since the previous data layer event or server call.
 
-There is no longer a concept of virtual page view, so this event should be fired whenever a virtual page view would have been fired in the past, such as when a new screen is loaded asyncronously within an angular, react, or vue app/embed.
+The parameters to send here can also vary considerably. For the purposes of this repository, I have included all of the parameters from the `page_view` event.
 
 ## Javascript Code
 ```js
 
-window.dataLayer = window.dataLayer || []; 
+window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({pageModel: null, sessionModel: null, userModel: null}) 
 window.dataLayer.push({
-  "event": "page_view",
+  "event": "custom_session_start",
   "pageModel": {
     "breadcrumb": "<breadcrumb>",
     "page_category": "<page_category>",
@@ -21,7 +21,6 @@ window.dataLayer.push({
     "page_category4": "<page_category4>",
     "page_category5": "<page_category5>",
     "page_id": "<page_id>",
-    "franchise_id": "<franchise_id>",
     "language": "<language>",
     "page_name": "<page_name>",
     "page_location": "<page_location>",
@@ -40,14 +39,13 @@ window.dataLayer.push({
 ## Variable Definitions
 |Parameter|Type|Required|Description|Example|Pattern|Min Length|Max Length|
 | --- | --- | --- | --- | --- | --- | --- | --- |
-|breadcrumb|string|optional|The breadcrumb heirarchy of the page, separated by greater than (>) or slash (/).|Home>Care Services>Glossary|
-|franchise_id|string|recommended|A unique identifier for the franchise this page is associated with|1078|
+|breadcrumb|string|optional|The breadcrumb heirarchy of the page, separated by greater than (>), slash (/), or pipe (|).|Home>Blog|
 |language|string|required|The language of the page, usually retrieved from the `<html>` tag on the page|en|
-|page_category|string|recommended|A human-readible used to group pages into clusters. If running low on custom dimensions, you may combine multiple categories together in this field, separated by greater than (>) or slash (/). See https://schema.org/category.|Senior Health & Wellbeing, Seniors and Nutrition|
-|page_category2|string|optional|page_category2 through page_category5 can be used to break down category if additional detail is needed and you have space for more custom dimensions|Stress Relief|
-|page_category3|string|optional|page_category2 through page_category5 can be used to break down category if additional detail is needed and you have space for more custom dimensions|Category 3|
-|page_category4|string|optional|page_category2 through page_category5 can be used to break down category if additional detail is needed and you have space for more custom dimensions|Category 4|
-|page_category5|string|optional|page_category2 through page_category5 can be used to break down category if additional detail is needed and you have space for more custom dimensions|Category 5|
+|page_category|string|recommended|A human-readible value used to group pages into clusters. If running low on custom dimensions, you may combine multiple categories together in this field, separated by greater than (>), slash (/), or pipe (|). See https://schema.org/category.|Blog|
+|page_category2|string|optional|page_category2 through page_category5 can be used to break down category if additional detail is needed and you have space for more custom dimensions|Google Products|
+|page_category3|string|optional|page_category2 through page_category5 can be used to break down category if additional detail is needed and you have space for more custom dimensions|Google Tag Manager|
+|page_category4|string|optional|page_category2 through page_category5 can be used to break down category if additional detail is needed and you have space for more custom dimensions|Implementation|
+|page_category5|string|optional|page_category2 through page_category5 can be used to break down category if additional detail is needed and you have space for more custom dimensions|Data Layer|
 |page_id|string|recommended||12345|
 |page_name|string|optional|The page name originally developed for Adobe Analytics.|Take-a-Deep-Breath:-Stress-Relief-Techniques-for-Seniors|
 |page_location|string|required|The full URL of the page. Equivalent to document.location.href.|https://www.comfortkeepers.com/articles/info-center/senior-health-and-wellbeing/take-a-deep-breath-stress-relief-techniques-for-se|

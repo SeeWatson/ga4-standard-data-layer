@@ -1,6 +1,8 @@
 # Click
 
-This event will be automatically sent whenever a user clicks on an HTML anchor `<a>` tag.
+This event may be sent whenever a user clicks on an HTML anchor `<a>` tag.
+
+Alternatively, GTM can be configured to automatically detect most clicks without needing an explicit data layer event. If you are using this approach we would recommend using our . In that case, this event only becomes necessary in situations GTM cannot easily detect, such as clicks inside of iframes. 
 
 ## Javascript Code
 ```js
@@ -34,9 +36,3 @@ window.dataLayer.push({
 |navigation_ancestry|string|optional|A hierarchical list of all navigation (menu) links that a link is contained within. Generally used within dropdown/mega menus to show the path to the menu item clicked.|About Us>Testimonials|
 |outbound|boolean|recommended|Set to "true" to indicate that the user clicked on an exit link|FALSE|
 |region_ancestry|string|optional|A hierarchical list of all regions that a link is contained within.|header|
-
-
-
-
-
-
