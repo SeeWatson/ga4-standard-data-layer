@@ -10,10 +10,10 @@ Generally triggered via an HTML change, focus, or click event [listener](https:/
 
 window.dataLayer = window.dataLayer || [];
 dataLayer.push({
-  event: 'sign_up_start'
-  eventModel: {
-    count_sign_up_start: 1,
-    method: '<method>'
+  "event": 'sign_up_start'
+  "eventModel": {
+    "count_sign_up_start": 1,
+    "method": '<method>'
   }
 });
 ```

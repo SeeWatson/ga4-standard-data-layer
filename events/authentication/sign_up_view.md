@@ -8,10 +8,10 @@ Fire whenever a user initially views an account creation form.
 
 window.dataLayer = window.dataLayer || [];
 dataLayer.push({
-  event: 'sign_up_view'
-  eventModel: {
-    count_sign_up_view: 1,
-    method: '<method>'
+  "event": 'sign_up_view'
+  "eventModel": {
+    "count_sign_up_view": 1,
+    "method": '<method>'
   }
 });
 ```

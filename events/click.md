@@ -1,6 +1,6 @@
 # Click
 
-Google Analytics has never really managed to capture link clicks very well, especially since they retired the old click overlay UI. Entire products exist that can provide extensive click tracking, so many companies rely on such products instead of doing any click tracking in GA. Also, GA4 charges by number of events and tracking click events adds a whote lot. However, we should still strive to do the best we can within GA to gather as much data as we can, and so this spec exists.
+Google Analytics has never really managed to capture link clicks very well, especially since they retired the old click overlay UI (it wasn't that great anyway). Entire products exist solely to provide extensive click tracking, so many companies rely on such products instead of doing any click tracking in GA. Also, GA4 charges by number of events and tracking click events adds a LOT. However, we should still strive to do the best we can within GA to gather as much data as we can, and so this spec exists.
 
 Perhaps because of the rise of dedicated link tracking tools, GA4 can now automatically collect outbound link clicks easily via enhanced measurement. However, the enhanced measurement approach has a few weaknesses:
 

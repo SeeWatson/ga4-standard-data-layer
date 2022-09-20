@@ -6,7 +6,7 @@ This event should be the first pushed into the data layer on each page (except f
 
 On SPA sites, this event should be fired whenever a virtual page view would have been fired in the past, such as when a new page/screen is loaded asyncronously within an angular, react, or vue app/embed.
 
-Firing this event manually instead of using enhanced measurement provided the opportunity to set a significant number of additional parameters that enhanced measurement misses...as well as counting page views
+Firing this event manually instead of using enhanced measurement provided the opportunity to set a significant number of additional parameters that enhanced measurement misses...as well as counting page views more explicitly via the `count_page_view` parameter.
 
 ## Javascript Code
 ```js

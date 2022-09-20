@@ -12,10 +12,10 @@ Another use case would be on a site that doesn't acttually offer authentication 
 
 window.dataLayer = window.dataLayer || [];
 dataLayer.push({
-  event: "user_detect",
-  user_data: {
-    user_id: "<user_id>",
-    user_login_state: '<user_login_state>',
+  "event": "user_detect",
+  "user_data": {
+    "user_id": "<user_id>",
+    "user_login_state": '<user_login_state>',
   }
 });
 ```

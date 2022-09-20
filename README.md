@@ -117,3 +117,13 @@ The specification takes Google's [automatically-collected](https://support.googl
   
   The answer, suprisingly, is usually to fire both. Whereas in UA you rarely fired more than 1 event at a time, GA4 automatically fires multiple events in many situations (`session_start` is the best example), gives you a dedicated UI for triggering events off of other events, and can batch multiple events through GTM. Given this, it's recommended that as long as it's not going to cost you significantly more money in your 360 account, just fire multiple events.
 </details>
+<details>
+  <summary>Why do this spec's recommended HTML data attributes start with data-layer-?</summary>
+
+  HTML data attributes have to start with `data-` to be valid. After spec'ing a lot of implementations in Google, Adobe, and other tools, it became clear that adding data attributes specifically for analytics without a namespace/prefix can be problematic as they can collide with data attributes intended for other uses. For instance, say you need to add a data attribute to a page of your site with the `page_category`. You decide to add `data-category` to the HTML `body` tag to store this data. However, the particular CMS system you use for your site adds a `data-category` attribute automatically with the first taxonomy category the page has been tagged with in the site. There is a conflict, and that data could be sent incorrectly to GA or another system. To avoid this, we generally will need to namespace the data attribute like so: `data-{{namespace}}-category`. The namespace is somewhat arbitrary. Lots of sites choose `data-analytics-`. This spec uses `data-layer-` for two reasons: 
+  
+  1. The "data layer" is a known concept in the analytics world as a way to pass data from your website to a variety of 3rd party tools (mostly tag managers, but lots of other tools leverage the data layer as well)
+  2. Data attributes added specifically for tag managers often end up in the data layer
+
+  If you want to use another namespace/prefix feel free to...but know that it may break integrations with the pre-built GTM containers referenced in this spec.
+</details>

@@ -8,14 +8,14 @@ Fire whenever a user logs in to an account.
 
 window.dataLayer = window.dataLayer || [];
 dataLayer.push({
-  event: "login",
-  eventModel: {
-    count_login: 1,
-    method: "<method>",
+  "event": "login",
+  "eventModel": {
+    "count_login": 1,
+    "method": "<method>",
   },
-  userModel: {
-    user_id: "<user_id>",
-    user_login_state: '<user_login_state>',
+  "userModel": {
+    "user_id": "<user_id>",
+    "user_login_state": '<user_login_state>',
   }
 });
 ```

@@ -8,14 +8,14 @@ Fire whenever a user successfully creates an account.
 
 window.dataLayer = window.dataLayer || [];
 dataLayer.push({
-  event: 'sign_up',
-  eventModel: {
-    count_sign_up: 1,
-    method: '<method>'
+  "event": 'sign_up',
+  "eventModel": {
+    "count_sign_up": 1,
+    "method": '<method>'
   }
-  userModel: {
-    user_id: "<user_id>",
-    user_login_state: '<user_login_state>',
+  "userModel": {
+    "user_id": "<user_id>",
+    "user_login_state": '<user_login_state>',
   }
 });
 ```
