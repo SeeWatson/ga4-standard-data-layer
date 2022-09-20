@@ -33,11 +33,7 @@ window.dataLayer.push({
     "site_section5": "<site_section5>",
     "@type": "<@type>"
   },
-  // Send this portion if session-scoped data is available at page load and needs to be set
-  "sessionModel": {
-    "session_id": "<session_id>"
-  },
-// Send this portion if user data is consistently available at page_load. If not send this with the user_detect event
+  // Send this portion if user data is consistently available at page_load. If not send this with the user_detect event
   "userModel": {
     "user_id": "<userId>"
   },
