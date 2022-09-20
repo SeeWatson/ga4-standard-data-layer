@@ -1,4 +1,4 @@
-# Detect User
+# User Detect
 
 This is an optional event that is intended to cover cases where a user authentication system exists on the site but the user authentication state may not be known by the time the page_view event nees to be sent.
 
@@ -12,7 +12,7 @@ Another use case would be on a site that doesn't acttually offer authentication 
 
 window.dataLayer = window.dataLayer || [];
 dataLayer.push({
-  event: "detect_user",
+  event: "user_detect",
   user_data: {
     user_id: "<user_id>",
     user_login_state: '<user_login_state>',

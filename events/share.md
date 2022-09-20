@@ -24,6 +24,7 @@ dataLayer.push({
   event: 'share',
   eventModel: {
     content_type: '<content_type>',
+    count_share: 1,
     item_id: '<item_id>',
     method: '<method>'
   }

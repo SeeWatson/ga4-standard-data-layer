@@ -5,11 +5,11 @@ Fired when a user adds payment information during a checkout flow.
 ## Javascript Code
 
 ```js
-
 window.dataLayer = window.dataLayer || [];
 dataLayer.push({
   event: "add_payment_info",
   eventModel: {
+    count_add_payment_info: 1,
     coupon: "<coupon>", 
     currency: "<currency>", 
     items: "<items>", 

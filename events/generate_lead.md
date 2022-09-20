@@ -9,6 +9,7 @@ window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
   "event": "generate_lead",
   "eventModel": {
+    "count_generate_lead": 1,
     "currency": "<currency>",
     "category": "<category>",
     "value": "<value>"

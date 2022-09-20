@@ -12,6 +12,7 @@ window.dataLayer = window.dataLayer || [];
 dataLayer.push({
   event: 'sign_up_start'
   eventModel: {
+    count_sign_up_start: 1,
     method: '<method>'
   }
 });

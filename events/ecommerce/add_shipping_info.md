@@ -10,6 +10,7 @@ window.dataLayer = window.dataLayer || [];
 dataLayer.push({
   event: "add_shipping_info",
   eventModel: {
+    count_add_shipping_info: 1,
     coupon: "<coupon>", 
     currency: "<currency>", 
     items: "<items>", 

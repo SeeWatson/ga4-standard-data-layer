@@ -1,6 +1,6 @@
 # Phone call start
 
-Fire whenever a user starts a phone call using a provider like Invoca.
+Fire whenever a user starts a phone call using a provider like Invoca, CallRail, or others.
 
 ## Javascript Code
 
@@ -19,4 +19,4 @@ dataLayer.push({
 
 |Parameter|Type|Required|Description|Example|Pattern|Min Length|Max Length|
 | --- | --- | --- | --- | --- | --- | --- | --- |
-|telephone|string|recommended|The telephone number dialed|1234567890|
+|telephone|string|recommended|The telephone number dialed. Used to distinguish dynamically generated numbers.|1234567890|^\d{10}$|

@@ -10,6 +10,7 @@ window.dataLayer = window.dataLayer || [];
 dataLayer.push({
   event: "login",
   eventModel: {
+    count_login: 1,
     method: "<method>",
   },
   userModel: {

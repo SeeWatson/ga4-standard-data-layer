@@ -9,6 +9,7 @@ window.dataLayer = window.dataLayer || [];
 dataLayer.push({
   event: "view_promotion",
   eventModel: {
+    count_view_promotion: 1,
     items: "<items>",
 
     // Omit these if they are set at the item level
@@ -33,12 +34,12 @@ dataLayer.push({
 
 |Field|Type|Required|Description|Example|Pattern|Min Length|Max Length|Minimum|Maximum|Multiple Of|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|creative_name|string|recommended if item is being sent with a promotion event|The name of a creative used in a promotional spot.|summer_banner2|
-|creative_slot|string|recommended if item is being sent with a promotion event|The name of a creative slot.|carousel1|
-|facets|delimited string|contextual|A double-delimited string of key/value pairs representing the refinements that were applied to this search. Only set if the list type is a search result or filter_by_group.|category:skin_health~skin_concern:acne~featured_as:best_seller|
-|list_type|string|contextual|The type of list the item was found in.|cards, carousel, popular_products, search_results|
-|promotion_id|string|Either `promotion_id` or `promotion_name` is required if item is being sent with a promotion event|The ID of a product promotion.|P_12345|
-|promotion_name|string|Either `promotion_id` or `promotion_name` is required if item is being sent with a promotion event|The name of a product promotion. One of `promotion_id` or `promotion name` is required.|Summer 15OFF|
-|search_term|string|contextual|The final search term submitted after any correction has been performed. Only set if the `list_type` is `search_results`.|sunscreen|
-|search_type|string|contextual|The type of search performed. Only set if the `list_type` is `search_results`.|site, filter_by_group|
+|creative_name|string|recommended if item is being sent with a promotion event|The name of a creative used in a promotional spot.|`summer_banner2`|
+|creative_slot|string|recommended if item is being sent with a promotion event|The name of a creative slot.|`carousel1`|
+|facets|delimited string|contextual|A double-delimited string of key/value pairs representing the refinements that were applied.|`category:Apparel~variant:green~featured_as:best_seller`|
 |items|array of [items](/schemas/item.md)|required|Populate with item objects that represent the product viewed.|`[{item_id: "SKU_12345", item_name: "Stan and Friends Tee", affiliation: "Google Merchandise Store", coupon: "SUMMER_FUN", currency: "USD", discount: 2.22, index: 0, item_brand: "Google", item_category: "Apparel", item_category2: "Adult", item_category3: "Shirts", item_category4: "Crew", item_category5: "Short sleeve", item_list_id: "carousel", item_list_name: "Carousel", item_variant: "green", location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo", price: 9.99, quantity: 1}]`
+|list_type|string|contextual|The type of list the item was found in.|`cards, carousel, popular_products, search_results`|
+|promotion_id|string|Either `promotion_id` or `promotion_name` is required if item is being sent with a promotion event|The ID of a product promotion.|`P_12345`|
+|promotion_name|string|Either `promotion_id` or `promotion_name` is required if item is being sent with a promotion event|The name of a product promotion. One of `promotion_id` or `promotion name` is required.|`Summer 15OFF`|
+|search_term|string|contextual|The final search term submitted after any correction has been performed. Only set if the `list_type` is `search_results`.|`shirts`|
+|search_type|string|contextual|The type of search performed. Only set if the `list_type` is `search_results`.|`site,product,global`|

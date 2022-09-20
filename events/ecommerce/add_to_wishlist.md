@@ -10,6 +10,7 @@ window.dataLayer = window.dataLayer || [];
 dataLayer.push({
   event: "add_to_wishlist",
   eventModel: {
+    count_add_to_wishlist: 1,
     currency: "<currency>", 
     items: "<items>", 
     value: "<value>" 

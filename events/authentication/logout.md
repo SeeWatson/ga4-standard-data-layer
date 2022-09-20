@@ -11,6 +11,7 @@ dataLayer.push({ user_data: null });
 dataLayer.push({
   event: "logout",
   userModel: {
+    count_logout: 1,
     user_login_state: '<user_login_state>',
   }
 });

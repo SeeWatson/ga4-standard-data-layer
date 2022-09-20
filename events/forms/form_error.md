@@ -13,6 +13,7 @@ dataLayer.push({
   event: 'form_error',
   eventModel: {
     category: '<category>',
+    count_form_error: 1,
     error_message: '<error_message>',
     identifier: '<identifier>',
     name: '<name>',
@@ -26,6 +27,7 @@ dataLayer.push({
 |Parameter|Type|Required|Description|Example|Pattern|Min Length|Max Length|
 | --- | --- | --- | --- | --- | --- | --- | --- |
 |error_message|string|required|The specific error that occurred. If an error message is shown to the user, this should be populated with that text.|Phone number should follow the format (xxx) xxx-xxxx, Must be a valid email address|
-|category|string|recommended|A human-readible identifier whose purpose will vary by event, but generally is used to group things (forms, links, videos) into loose assocations based upon shared characteristics. If running low on custom dimensions, you may combine multiple categories together in this field, separated by greater than (>) or slash (/). See https://schema.org/category.|Job Application|
-|identifier|string|recommended|The form machine-readable name. This should be a unique value specific to this form, if one exists. If one does not exist, this can also be populated with the same value as the <name>.|form-12345|
-|name|string|required|The form human-readable name. This should be something that an analyst without a deep knowledge of the technical implementation of the site can easily identify the form with. It should be lowercase snake_case.|Caregiver 1078 Application||type|string|recommended|The type of error that occurred.|form_field_validation, server_error|
+|category|string|recommended|A human-readible identifier whose purpose will vary by event, but generally is used to group things (forms, links, videos) into loose assocations based upon shared characteristics. If running low on custom dimensions, you may combine multiple categories together in this field, separated by greater than (>) or slash (/). See https://schema.org/category.|Registration Form|
+|identifier|string|recommended|The form machine-readable name. This should be a unique value specific to this form, if one exists. If one does not exist, this can also be populated with the same value as the `<name>`.|form-12345|
+|name|string|required|The form human-readable name. This should be something that an analyst without a deep knowledge of the technical implementation of the site can easily identify the form with. It should be lowercase snake_case if possible.|event_registration_form|
+|type|string|recommended|The type of error that occurred.|form_field_validation, server_error|

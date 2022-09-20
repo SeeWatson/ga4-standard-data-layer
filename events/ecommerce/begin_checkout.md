@@ -10,6 +10,7 @@ window.dataLayer = window.dataLayer || [];
 dataLayer.push({
   event: "begin_checkout",
   eventModel: {
+    count_begin_checkout: 1,
     coupon: "<coupon>", 
     currency: "<currency>", 
     items: "<items>", 
