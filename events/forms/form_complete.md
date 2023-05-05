@@ -1,4 +1,4 @@
-# Form Complete
+# Form Submit
 
 Fire whenever a user successfully completes a form. 
 
@@ -10,7 +10,7 @@ This event is fired when form input is successfully received and process. This i
 
 window.dataLayer = window.dataLayer || [];
 dataLayer.push({
-  event: 'form_complete',
+  event: 'form_submit',
   eventModel: {
     category: '<category>',
     count_form_complete: 1,
