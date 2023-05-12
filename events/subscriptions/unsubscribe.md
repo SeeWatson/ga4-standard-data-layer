@@ -1,6 +1,6 @@
 # Unsubscribe
 
-Fire whenever a user subscribes to something. This typically is used for subscriptions to email lists, but could actually represent terminating any subscription.
+Fire whenever a user unsubscribes from something. This typically is used for subscriptions to email lists, but could actually represent terminating any subscription.
 
 ## Javascript Code
 
@@ -8,7 +8,7 @@ Fire whenever a user subscribes to something. This typically is used for subscri
 
 window.dataLayer = window.dataLayer || [];
 dataLayer.push({
-  event: 'subscribe',
+  event: 'unsubscribe',
   eventModel: {
     category: '<category>',
     identifier: '<identifier>',
