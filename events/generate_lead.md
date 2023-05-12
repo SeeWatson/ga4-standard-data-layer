@@ -20,7 +20,6 @@ window.dataLayer.push({
 ## Variable Definitions
 |Parameter|Type|Required|Description|Example|Pattern|Min Length|Max Length|
 | --- | --- | --- | --- | --- | --- | --- | --- |
-|currency|string|recommended|The currency, in 3-letter ISO 4217 format. Multiple currencies per event is not supported. Each item within the items array should set the same currency.
-|USD|
+|currency|string|recommended|The currency, in 3-letter ISO 4217 format. Multiple currencies per event is not supported. Each item within the items array should set the same currency.|USD|
 |category|string|recommended|A human-readible identifier whose purpose will vary by event, but generally is used to group things (forms, links, videos) into loose assocations based upon shared characteristics. If running low on custom dimensions, you may combine multiple categories together in this field, separated by greater than (>) or slash (/). See https://schema.org/category.|qualified|
 |value|number|recommended|For the "purchase" event this is the total revenue after coupons, but before tax and shipping.|100|
